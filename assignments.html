@@ -3,9 +3,8 @@
     <head>
 	    <title> Assignments </title>
         <style type="text/css">
-            h1 {
-                color: rebeccapurple;
-                font-family: "Eras Bold ITC", serif;
+            body {
+                margin: 0;
             }
             table {
                 border-collapse: collapse;
@@ -20,11 +19,32 @@
                 border: 1px solid darkblue;
                 padding: 10px;
             }
+            .navbar{
+                width: 100%;
+                margin-bottom: 10px;
+                background-color: purple;
+                font-family: "Eras Bold ITC", serif;
+            }
+            .navelement {
+                display: inline-block;
+                font-size: 30px;
+                padding: 10px;
+            }
+            .navelement:hover {
+                background-color: darkgoldenrod;
+            }
+            a{
+                text-decoration: none;
+                color: lightblue;
+            }
         </style>
     </head>
 
     <body>
-	<h1> My Assignments </h1>
+	<div class="navbar">
+        <div class="navelement"><a href="index.html">Home</a></div>
+        <div class="navelement"><a href="assignments.html">My Assignments</a></div>
+    </div>
 	<table>
             <thead>
                 <tr>
