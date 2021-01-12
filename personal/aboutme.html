@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Me</title>
+    <link rel="stylesheet" href="aboutme.css">
+</head>
+<body>
+<!-- start of fixed nav code -->
+<div class="navbar">
+    <a class="logo" href="personal.html"> AT</a>
+    <ul class="nav">
+        <li><a href="personal.html">Home</a></li>
+        <li><a href="aboutme.html">About</a></li>
+    </ul>
+</div>
+<script type="text/javascript">
+    window.addEventListener("scroll", function() {
+        let header = document.querySelector("div");
+        header.classList.toggle("opaque", window.scrollY > 0);
+    })
+</script>
+<!-- end of fixed nav code -->
+<div class="headertext">
+    <h1>
+        About Me!
+    </h1>
+</div>
+<div class="container">
+    <hr>
+    <div class="box">
+        <img src="Dog%20General.jpg" width="500" height="333" alt="kayak">
+        <div class="flexy">
+            <h1 id="greeting">Hi! I'm:</h1>
+            <!-- Slot machine code here -->
+            <section id="display">
+                <div id="container">
+                    <div ><span>an adventurer</span></div>
+                    <div><span>a gamer</span></div>
+                    <div><span>a coder</span></div>
+                    <div><span>a student</span></div>
+                    <div><span>an optimist</span></div>
+                    <div><span>one of da boiz</span></div>
+                </div>
+            </section>
+            <script type="text/javascript">
+                let display = document.getElementById('display');
+                let container = document.getElementById('container');
+                let hovering = false;
+
+                display.addEventListener('mouseover', () => {
+                    if(hovering) return;
+                    setTimeout(() => hovering = false, 1000);
+                    moveContainer();
+                    hovering = true;
+                });
+
+                function moveContainer () {
+                    let choosenOption = getRandomOption();
+                    setTop(-choosenOption.offsetTop + 2);
+                }
+
+                function setTop (top) {
+                    container.style.top = `${top}px`;
+                }
+
+                function getRandomOption () {
+                    let options = container.children;
+                    let randomOption = Math.floor(Math.random() * (options.length));
+                    let choosenOption = options[randomOption];
+
+                    return choosenOption;
+                }
+            </script>
+            <!-- end slot machine code -->
+        </div>
+    </div>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores harum veritatis
+        nemo magni odio reprehenderit atque, esse animi porro suscipit vero nobis modi quis.
+        Exercitationem quasi beatae, assumenda officia illum sunt. Cum voluptas maiores
+        vitae eius hic inventore deleniti placeat perferendis quam ut nostrum maxime optio
+        voluptatibus ab laboriosam, quia consectetur atque minus? Adipisci amet aut sint
+        voluptates delectus aperiam? Veniam ab illum enim in libero nihil culpa explicabo
+        perspiciatis veritatis non repellendus architecto excepturi nostrum porro voluptatem
+        aperiam animi asperiores, a voluptatibus temporibus minima voluptas ipsa! Recusandae
+        nostrum, aut, voluptates est error iusto, eaque excepturi soluta quas maiores amet.
+    </p>
+</div>
+
+</body>
+</html>
