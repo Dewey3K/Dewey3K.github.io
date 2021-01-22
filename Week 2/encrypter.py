@@ -3,6 +3,7 @@ lines = file.readlines()
 key = 5
 encrypted = open('encrypted.txt', 'w')
 
+#Caesar Cypher encrypter
 for line in lines:
     new_line = ''
     for character in line:
